@@ -19,9 +19,12 @@ public class HeroService {
   }
 
   public Hero save(Hero hero) {
+    // Valider la somme des propriétés
+    if (!isValidHeroStats(hero)) {
+      throw new RuntimeException(String.format("{\"code\": \"%s\", \"message\": \"%s\"}", 401, "Somme des stats trop élevé"));
+    }
     return heroRepository.save(hero);
   }
-
   public Optional<Hero> findById(Long id) {
     return heroRepository.findById(id);
   }
@@ -33,4 +36,15 @@ public class HeroService {
   public void delete(Long id) {
     heroRepository.deleteById(id);
   }
+
+  public boolean existsById(Long id) {
+    return heroRepository.existsById(id);
+  }
+
+  private boolean isValidHeroStats(Hero hero) {
+    int totalStats = hero.getStrength() + hero.getDefense() + hero.getSpeed()
+      + hero.getAccuracy() + hero.getIntelligence() + hero.getLuck();
+    return totalStats <= 300;
+  }
+
 }

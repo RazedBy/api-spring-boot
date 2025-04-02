@@ -18,40 +18,90 @@ public class Hero implements Serializable {
     @Column(name = "universe")
     private String universe;
 
-    @Column(name = "power_level")
-    private int powerLevel;
+    @Column(name = "strength")
+    private Integer strength;
+    @Column(name="defense")
+    private Integer defense;
+    @Column(name="speed")
+    private Integer speed;
+    @Column(name = "accuracy")
+    private Integer accuracy;
+    @Column(name = "intelligence")
+    private Integer intelligence;
+    @Column(name = "luck")
+    private Integer luck;
 
-    // Getters et setters
+
     public Long getId() {
-        return id;
+      return id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+      this.id = id;
     }
 
     public String getName() {
-        return name;
+      return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+      this.name = name;
     }
 
     public String getUniverse() {
-        return universe;
+      return universe;
     }
 
     public void setUniverse(String universe) {
-        this.universe = universe;
+      this.universe = universe;
     }
 
-    public int getPowerLevel() {
-        return powerLevel;
+    public Integer getStrength() {
+      return strength;
     }
 
-    public void setPowerLevel(int powerLevel) {
-        this.powerLevel = powerLevel;
+    public void setStrength(Integer strength) {
+      this.strength = strength;
+    }
+
+    public Integer getDefense() {
+      return defense;
+    }
+
+    public void setDefense(Integer defense) {
+      this.defense = defense;
+    }
+
+    public Integer getSpeed() {
+      return speed;
+    }
+
+    public void setSpeed(Integer speed) {
+      this.speed = speed;
+    }
+
+    public Integer getAccuracy() {
+      return accuracy;
+    }
+
+    public void setAccuracy(Integer accuracy) {
+      this.accuracy = accuracy;
+    }
+
+    public Integer getIntelligence() {
+      return intelligence;
+    }
+
+    public void setIntelligence(Integer intelligence) {
+      this.intelligence = intelligence;
+    }
+
+    public Integer getLuck() {
+      return luck;
+    }
+
+    public void setLuck(Integer luck) {
+      this.luck = luck;
     }
 
     @Override
@@ -71,11 +121,16 @@ public class Hero implements Serializable {
 
     @Override
     public String toString() {
-        return "Hero{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", universe='" + universe + '\'' +
-                ", powerLevel=" + powerLevel +
-                '}';
+      return "Hero{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", universe='" + universe + '\'' +
+        ", strength=" + strength +
+        ", defense=" + defense +
+        ", speed=" + speed +
+        ", accuracy=" + accuracy +
+        ", intelligence=" + intelligence +
+        ", luck=" + luck +
+        '}';
     }
 }
