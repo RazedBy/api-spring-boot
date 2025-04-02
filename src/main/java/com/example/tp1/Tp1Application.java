@@ -37,8 +37,8 @@ public class Tp1Application {
 
             // Construire le JSON
             Map<String, String> requestBody = new HashMap<>();
-            requestBody.put("studentName", "Léo LETENEUR");
-            requestBody.put("baseUrl", "http://" + serverIp + ":8080");
+            requestBody.put("studentName", "Léo LETENEUR test3");
+            requestBody.put("baseUrl", "https://8bd9-2a04-cec0-1148-98f0-b02d-8a0f-d3-1fdd.ngrok-free.app:8080");
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
