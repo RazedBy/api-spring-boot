@@ -1,0 +1,16 @@
+{
+  "generator-jhipster": {
+    "baseName": "tp1",
+    "clientFramework": "no",
+    "clientTestFrameworks": null,
+    "clientTheme": null,
+    "creationTimestamp": 1743584390163,
+    "entities": [],
+    "jhipsterVersion": "8.10.0",
+    "microfrontend": null,
+    "microfrontends": [],
+    "skipClient": true,
+    "skipServer": true,
+    "withAdminUi": null
+  }
+}
